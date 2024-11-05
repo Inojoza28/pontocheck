@@ -29,7 +29,7 @@ function initMap() {
     }).addTo(map);
     // Adiciona um marcador na localização de Recife
     L.marker(recifeLocation).addTo(map)
-        .bindPopup("Localização da Empresa")
+        .bindPopup("PontoCheck")
         .openPopup();
 }
 
