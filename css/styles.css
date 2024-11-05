@@ -1,0 +1,406 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Configurações gerais */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f6f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin-bottom: 20px;
+}
+
+.main-container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    height: 90vh;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Barra Lateral */
+.sidebar {
+    width: 220px;
+    background-color: #0e5a81;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 40px;
+    background-color: #87b4c9;
+    border-radius: 30px;
+    padding: 20px;
+}
+
+.logo img {
+    width: 70px;
+    margin-bottom: 10px;
+}
+
+.logo h2 {
+    font-size: 20px;
+}
+
+.navigation {
+    width: 100%;
+}
+
+.nav-item {
+    color: #ffffffcc;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.nav-item:hover,
+.nav-item.active {
+    background-color: #3e9bff;
+    color: #ffffff;
+}
+
+.nav-item i {
+    font-size: 18px;
+}
+
+/* Conteúdo Principal */
+.content {
+    flex: 1;
+    background: #ffffff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+/* Cabeçalho */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.header h1 {
+    font-size: 24px;
+    color: #007bff;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-photo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #007bff;
+    margin-right: 10px;
+}
+
+.user-name {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Filtros e Resumo */
+.filters-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.filters {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.filters input[type="date"] {
+    padding: 8px;
+    border: 1px solid #cbd5e0;
+    border-radius: 8px;
+    transition: border-color 0.2s;
+    font-size: 14px;
+}
+
+.filters input[type="date"]:focus {
+    border-color: #007bff;
+}
+
+.btn-filter {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.btn-filter:hover {
+    background-color: #0056b3;
+}
+
+/* Painel de Resumo */
+.summary {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.summary-item {
+    background-color: #f1f5f9;
+    color: #007bff;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100px;
+}
+
+.summary-item span {
+    font-size: 12px;
+    font-weight: 500;
+    color: #4a5568;
+}
+
+.summary-item strong {
+    font-size: 18px;
+}
+
+/* Tabela de Relatório */
+.report-table {
+    margin-top: 10px;
+    overflow-x: auto;
+}
+
+.report-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.report-table th,
+.report-table td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.report-table th {
+    background-color: #007bff;
+    color: white;
+    font-size: 14px;
+}
+
+.report-table tr:hover {
+    background-color: #f9fbfd;
+}
+
+.report-table td {
+    color: #4a5568;
+    font-size: 14px;
+}
+
+/* Gráfico */
+.chart {
+    padding: 15px 0;
+}
+
+/* Responsividade */
+/* Responsividade aprimorada */
+/* Responsividade aprimorada */
+@media (max-width: 1024px) {
+    .main-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .sidebar {
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .navigation {
+        display: flex;
+        gap: 20px;
+    }
+
+    .nav-item {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .content {
+        padding: 15px;
+    }
+
+    .header h1 {
+        font-size: 22px;
+    }
+
+    .user-info .user-photo {
+        width: 35px;
+        height: 35px;
+    }
+
+    .filters-summary {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: space-between;
+    }
+
+    .filters,
+    .summary {
+        flex: 1;
+    }
+
+    .summary {
+        display: flex;
+        justify-content: space-around;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        display: none; /* Oculta a sidebar para mais espaço de conteúdo */
+    }
+
+    .header h1 {
+        font-size: 20px;
+    }
+
+    .user-info {
+        gap: 8px;
+    }
+
+    .filters-summary {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .filters {
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .summary {
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .summary-item {
+        width: 70px;
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .report-table th,
+    .report-table td {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .btn-filter {
+        font-size: 13px;
+        padding: 6px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .user-info .user-photo {
+        width: 30px;
+        height: 30px;
+    }
+
+    .filters-summary {
+        align-items: center;
+        gap: 15px;
+    }
+
+    .filters {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .summary {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .summary-item {
+        width: 90px;
+        padding: 8px;
+        font-size: 11px;
+    }
+
+    .report-table th,
+    .report-table td {
+        font-size: 11px;
+        padding: 6px;
+    }
+
+    .btn-filter {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+
+    .chart canvas {
+        width: 100%;
+        height: 200px;
+    }
+}
