@@ -196,10 +196,11 @@ body {
 
 /* Tabela de Relatório */
 .report-table {
-    margin-top: 10px;
-    overflow-x: auto;
+    max-height: 500px; /* Exemplo de altura aumentada */
+    overflow-y: auto; /* Para rolar caso a lista ultrapasse o limite */
 }
 
+/* Tabela de Relatório para ajustar a rolagem se necessário */
 .report-table table {
     width: 100%;
     border-collapse: collapse;
@@ -230,11 +231,12 @@ body {
 /* Gráfico */
 .chart {
     padding: 15px 0;
+    margin: 20px auto;
+    width: 90%; /* Ajuste conforme necessário */
+    height: 450px; /* Exemplo de altura reduzida */
 }
 
 /* Responsividade */
-/* Responsividade aprimorada */
-/* Responsividade aprimorada */
 @media (max-width: 1024px) {
     .main-container {
         flex-direction: column;
