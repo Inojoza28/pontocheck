@@ -17,8 +17,10 @@
         <!-- Barra Lateral -->
         <aside class="sidebar">
             <div class="logo">
+                <a href="ponto.html" style="text-decoration: none; color: #FFFFFF;">
                 <img src="imgs/logo ponto.png" alt="PontoCheck Logo">
                 <h2>PontoCheck</h2>
+            </a>
             </div>
             <nav class="navigation">
                 <a href="relatorio.html" class="nav-item"><i class="fas fa-chart-line"></i> Relatórios</a>
@@ -31,12 +33,18 @@
             <div class="content">
                 <!-- Cabeçalho -->
                 <header class="header">
-                    <h1>Marcação de Ponto</h1>
+                    <h1>Relatório de Ponto</h1>
                     <div class="user-info">
-                        <img src="imgs/Eu.jpeg" alt="Foto do Usuário" class="user-photo">
-                        <span class="user-name">Carlos Gabriel</span>
+                        <img src="imgs/Eu.jpeg" alt="Foto do Usuário" class="user-photo" onclick="openModal()">
+                        <span class="user-name"><a href="configuracoes.html" style="text-decoration: none; color: #000000;">Carlos Gabriel</a></span>
                     </div>
                 </header>
+            
+                    <!-- Modal para a imagem -->
+                <div id="photoModal" class="modal2" onclick="closeModal()">
+                 <span class="close" onclick="closeModal()">&times;</span>
+                 <img class="modal-content2" id="expandedImg">
+               </div>
     
                 <!-- Seção de Marcação de Ponto -->
                 <section class="point-check-section">
@@ -81,5 +89,6 @@
         </div>
         <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script src="js/ponto.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
