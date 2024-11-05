@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imgs/logo ponto.png" type="image/x-icon" sizes="64x64">
+    <title>Relatório de Ponto - PontoCheck</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="main-container">
+        <!-- Barra Lateral -->
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="imgs/logo ponto.png" alt="PontoCheck Logo">
+                <h2>PontoCheck</h2>
+            </div>
+            <nav class="navigation">
+                <a href="relatorio.html" class="nav-item active"><i class="fas fa-chart-line"></i> Relatórios</a>
+                <a href="ponto.html" class="nav-item"><i class="fas fa-user"></i> Ponto</a>
+                <a href="configuracoes.html" class="nav-item"><i class="fas fa-cogs"></i> Configurações</a>
+                <a href="index.html" class="nav-item"><i class="fas fa-sign-out-alt"></i> Sair</a>
+            </nav>
+        </aside>
+
+        <!-- Conteúdo Principal -->
+        <div class="content">
+            <!-- Cabeçalho -->
+            <header class="header">
+                <h1>Relatório de Ponto</h1>
+                <div class="user-info">
+                    <img src="imgs/Eu.jpeg" alt="Foto do Usuário" class="user-photo">
+                    <span class="user-name">Carlos Gabriel</span>
+                </div>
+            </header>
+
+            <!-- Filtros e Resumo -->
+            <section class="filters-summary">
+                <div class="filters">
+                    <input type="date" id="start-date">
+                    <input type="date" id="end-date">
+                    <button class="btn-filter"><i class="fas fa-filter"></i> Filtrar</button>
+                </div>
+                <div class="summary">
+                    <div class="summary-item">
+                        <span>Total de Horas</span>
+                        <strong>160h</strong>
+                    </div>
+                    <div class="summary-item">
+                        <span>Horas Extras</span>
+                        <strong>20h</strong>
+                    </div>
+                    <div class="summary-item">
+                        <span>Irregularidades</span>
+                        <strong>2</strong>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tabela de Relatório -->
+            <section class="report-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Data</th>
+                            <th>Entrada</th>
+                            <th>Saída</th>
+                            <th>Horas Trabalhadas</th>
+                            <th>Horas Extras</th>
+                            <th>Observações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="report-body">
+                        <!-- Linhas de dados dinâmicos -->
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Gráfico -->
+            <section class="chart">
+                <canvas id="workHoursChart"></canvas>
+            </section>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

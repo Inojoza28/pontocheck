@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imgs/logo ponto.png" type="image/x-icon" sizes="64x64">
+    <title>Marcação de Ponto - PontoCheck</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/ponto.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+</head>
+</head>
+<body>
+    <div class="main-container">
+        <!-- Barra Lateral -->
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="imgs/logo ponto.png" alt="PontoCheck Logo">
+                <h2>PontoCheck</h2>
+            </div>
+            <nav class="navigation">
+                <a href="relatorio.html" class="nav-item"><i class="fas fa-chart-line"></i> Relatórios</a>
+                <a href="ponto.html" class="nav-item active"><i class="fas fa-user"></i> Ponto</a>
+                <a href="configuracoes.html" class="nav-item"><i class="fas fa-cogs"></i> Configurações</a>
+                <a href="index.html" class="nav-item"><i class="fas fa-sign-out-alt"></i> Sair</a>
+            </nav>
+        </aside>
+            <!-- Conteúdo Principal -->
+            <div class="content">
+                <!-- Cabeçalho -->
+                <header class="header">
+                    <h1>Marcação de Ponto</h1>
+                    <div class="user-info">
+                        <img src="imgs/Eu.jpeg" alt="Foto do Usuário" class="user-photo">
+                        <span class="user-name">Carlos Gabriel</span>
+                    </div>
+                </header>
+    
+                <!-- Seção de Marcação de Ponto -->
+                <section class="point-check-section">
+                    <div class="notification-icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <div class="clock-display">
+                        <h2 id="current-time">--:--</h2>
+                        <p>Hora Atual</p>
+                    </div>
+    
+                    <!-- Representação de Marcação por Digital e Reconhecimento Facial -->
+                    <div class="authentication-methods">
+                        <div class="method">
+                            <button class="btn-auth btn-digital" onclick="authenticate('digital')">
+                                <i class="fas fa-fingerprint"></i> Reconhecimento Digital
+                            </button>
+                        </div>
+                        <div class="method">
+                            <button class="btn-auth btn-facial" onclick="authenticate('facial')">
+                                <i class="fas fa-user-circle"></i> Reconhecimento Facial
+                            </button>
+                        </div>
+                    </div>                    
+    
+                    <!-- Localização da Empresa no Mapa -->
+                    <div class="location-section">
+                        <h3>Localização da Empresa</h3>
+                        <div id="map"></div>
+                    </div>
+                </section>
+            </div>
+
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <div id="loader" class="loader"></div>
+                    <i id="success-icon" class="fas fa-check-circle success-icon"></i>
+                    <p id="modal-message">Processando...</p>
+                </div>
+            </div>            
+            
+        </div>
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="js/ponto.js"></script>
+</body>
+</html>
