@@ -47,3 +47,16 @@ new Chart(ctx, {
         }
     }
 });
+
+function openModal() {
+    const modal = document.getElementById("photoModal");
+    const modalImg = document.getElementById("expandedImg");
+    const userPhoto = document.querySelector(".user-photo");
+
+    modal.style.display = "flex";
+    modalImg.src = userPhoto.src;
+}
+
+function closeModal() {
+    document.getElementById("photoModal").style.display = "none";
+}
