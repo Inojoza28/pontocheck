@@ -231,7 +231,7 @@ body {
 /* Gráfico */
 .chart {
     padding: 15px 0;
-    margin: 60px auto;
+    margin: 40px auto;
     width: 75%; /* Ajuste conforme necessário */
     height: 450px; /* Exemplo de altura reduzida */
 }
