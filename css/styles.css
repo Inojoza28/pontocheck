@@ -207,11 +207,21 @@ body {
     border-collapse: collapse;
 }
 
+/* Bordas verticais para demarcar cada coluna */
 .report-table th,
 .report-table td {
-    padding: 12px 10px; /* Aumenta a altura da célula */
-    line-height: 1.5; /* Ajusta a altura da linha para maior espaçamento */
+    padding: 12px 10px;
+    text-align: center;
+    border-bottom: 1px solid #e2e8f0; /* Linha horizontal entre as linhas */
+    border-right: 1px solid #e2e8f0; /* Linha vertical para separar colunas */
 }
+
+/* Remove a borda da última coluna para evitar borda dupla */
+.report-table th:last-child,
+.report-table td:last-child {
+    border-right: none;
+}
+
 
 .report-table th {
     background-color: #007bff;
