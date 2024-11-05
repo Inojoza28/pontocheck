@@ -196,8 +196,9 @@ body {
 
 /* Tabela de Relatório */
 .report-table {
-    max-height: 500px; /* Exemplo de altura aumentada */
-    overflow-y: auto; /* Para rolar caso a lista ultrapasse o limite */
+    height: auto; /* Define a altura de acordo com o conteúdo */
+    max-height: none; /* Remova o limite de altura */
+    overflow-y: visible; /* Permite que a tabela se expanda sem rolagem */
 }
 
 /* Tabela de Relatório para ajustar a rolagem se necessário */
@@ -208,9 +209,8 @@ body {
 
 .report-table th,
 .report-table td {
-    padding: 10px;
-    text-align: center;
-    border-bottom: 1px solid #e2e8f0;
+    padding: 12px 10px; /* Aumenta a altura da célula */
+    line-height: 1.5; /* Ajusta a altura da linha para maior espaçamento */
 }
 
 .report-table th {
@@ -231,8 +231,8 @@ body {
 /* Gráfico */
 .chart {
     padding: 15px 0;
-    margin: 20px auto;
-    width: 90%; /* Ajuste conforme necessário */
+    margin: 60px auto;
+    width: 75%; /* Ajuste conforme necessário */
     height: 450px; /* Exemplo de altura reduzida */
 }
 
